@@ -20,8 +20,10 @@ public class App {
         springClasses.stream()
                 .filter(oc -> oc.getTitle().startsWith("spring"))
                 .forEach(oc -> System.out.println(oc.getId()));
+
         System.out.println("close 되지 않은 수업");
         // TODO
+        springClasses.stream().filter(oc -> !oc.isClosed()).forEach(oc -> System.out.println(oc.getId()));
 
         System.out.println("수업 이름만 모아서 스트림 만들기");
         // TODO
